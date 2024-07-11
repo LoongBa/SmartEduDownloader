@@ -51,6 +51,7 @@ public partial class MainForm : Form
                 {// 教材详情页面
                     var id = Regex.Match(page.Url, @"contentId=([^&]+)").Groups[1].Value;
                     var url = $"https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/{id}.pkg/pdf.pdf";
+                    await page.WaitForLoadStateAsync();
                     WriteText($"教材：{url}");
                 }
                 else

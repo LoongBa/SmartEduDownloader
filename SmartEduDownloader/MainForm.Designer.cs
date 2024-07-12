@@ -50,17 +50,18 @@
             txtLog.Size = new Size(1192, 185);
             txtLog.TabIndex = 1;
             // 
-            // Form1
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1222, 730);
             Controls.Add(txtLog);
             Controls.Add(btnNavigate);
-            Name = "Form1";
+            Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "电子教材下载：国家智慧教育平台";
-            Load += Form1_Load;
+            FormClosing += MainForm_FormClosing;
+            Load += MainForm_LoadAsync;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -5,6 +5,8 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartEduDownloader", "SmartEduDownloader\SmartEduDownloader.csproj", "{881CC6D2-4BB6-4CA0-B6C8-75AF4C921E0C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartEduDownloader.Cli", "SmartEduDownloader.Cli\SmartEduDownloader.Cli.csproj", "{C4EEF722-D04F-45BB-85C4-BD65AA62577D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,14 @@ Global
 		{881CC6D2-4BB6-4CA0-B6C8-75AF4C921E0C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{881CC6D2-4BB6-4CA0-B6C8-75AF4C921E0C}.Release|x64.ActiveCfg = Release|x64
 		{881CC6D2-4BB6-4CA0-B6C8-75AF4C921E0C}.Release|x64.Build.0 = Release|x64
+		{C4EEF722-D04F-45BB-85C4-BD65AA62577D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4EEF722-D04F-45BB-85C4-BD65AA62577D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4EEF722-D04F-45BB-85C4-BD65AA62577D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C4EEF722-D04F-45BB-85C4-BD65AA62577D}.Debug|x64.Build.0 = Debug|Any CPU
+		{C4EEF722-D04F-45BB-85C4-BD65AA62577D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4EEF722-D04F-45BB-85C4-BD65AA62577D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4EEF722-D04F-45BB-85C4-BD65AA62577D}.Release|x64.ActiveCfg = Release|Any CPU
+		{C4EEF722-D04F-45BB-85C4-BD65AA62577D}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

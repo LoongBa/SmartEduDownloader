@@ -31,6 +31,8 @@ namespace SmartEduDownloader.Cli
         const string VersionString = "Ver1.01 龙爸 友情提供";
         const string NameStringEnglish = "SmartEdu Downloader";
         const string VerStringEnglish = "Ver1.01 by LoongBa";
+        const string AboutString = "陪伴孩子学习编程，支持开源请点 Star，谢谢";
+        private const string HomePageUrl = "http://loongba.cn";
         const string Aria2CPath = "Aria2c\\aria2c.exe";     // aria2c 命令行工具的路径
 
         private static JArray? _books;
@@ -111,7 +113,8 @@ namespace SmartEduDownloader.Cli
         {
             try
             {
-                Console.Write("正在更新教材数据...", Color.LightGreen);
+                System.Console.ForegroundColor = ConsoleColor.Cyan;
+                System.Console.Write("正在更新教材数据...");
                 // 读取，或更新 Books 数据文件
                 if (File.Exists(BooksDataFilename))
                     _books = JArray.Parse(await File.ReadAllTextAsync(BooksDataFilename));
@@ -143,11 +146,12 @@ namespace SmartEduDownloader.Cli
                     // 写入合并后的数据文件
                     await File.WriteAllTextAsync(BooksDataFilename, _books.ToString());
                 }
-                Console.Write("\r更新教材数据...完成。\n", Color.LightGreen);
+                System.Console.Write("\r更新教材数据...完成。\n");
+                System.Console.ResetColor();
             }
             catch (Exception e)
             {
-                Console.WriteLine($"UpdateBooksData() 更新 books 数据文件出错：{e}", Color.Red);
+                ShowErrorMessage($"UpdateBooksData() 更新 books 数据文件出错：{e}");
             }
         }
 
@@ -158,7 +162,8 @@ namespace SmartEduDownloader.Cli
         {
             try
             {
-                Console.Write("正在更新教材目录数据...", Color.LightGreen);
+                System.Console.ForegroundColor = ConsoleColor.Cyan;
+                System.Console.Write("正在更新教材目录数据...");
                 // 读取，或更新 Catalog 数据文件
                 if (File.Exists(TagsFilename))
                     _Catalog = JObject.Parse(await File.ReadAllTextAsync(TagsFilename));
@@ -174,12 +179,20 @@ namespace SmartEduDownloader.Cli
                     // 保存 Catalog 数据文件
                     await File.WriteAllTextAsync(TagsFilename, _Catalog.ToString());
                 }
-                Console.Write("\r更新教材目录数据...完成。\n", Color.LightGreen);
+                System.Console.Write("\r更新教材目录数据...完成。\n");
+                System.Console.ResetColor();
             }
             catch (Exception e)
             {
-                Console.WriteLine($"\rUpdateCatalogData() 更新 tags 数据文件出错：{e}", Color.Red);
+                ShowErrorMessage($"\rUpdateCatalogData() 更新 tags 数据文件出错：{e}");
             }
+        }
+
+        private static void ShowErrorMessage(string message)
+        {
+            System.Console.ForegroundColor = ConsoleColor.Red;
+            System.Console.WriteLine(message);
+            System.Console.ResetColor();
         }
 
         static void FilterProperties(JToken token, HashSet<string> propertiesToKeep)
@@ -498,7 +511,7 @@ namespace SmartEduDownloader.Cli
                 new(levelName, Color.Red),
                 new(subjectName, Color.Orange),
                 new(typeName, Color.LightGreen),
-                new(gradeName, Color.Yellow),
+                new(gradeName, Color.Red),
             ];
             Console.WriteLineFormatted("【{0}·{1}·{2}·{3}】的教材有：", Color.Gray, formatters);
             var count = 0;
@@ -539,8 +552,17 @@ namespace SmartEduDownloader.Cli
         {
             Console.WriteAscii(NameStringEnglish, Color.Green);
             Console.WriteAscii(VerStringEnglish, Color.Chocolate);
-            Console.WriteLine($"欢迎使用 {NameString}", Color.Green);
-            Console.WriteLine($"{VersionString}", Color.Chocolate);
+            Console.Write($"欢迎使用 {NameString}", Color.Chocolate);
+            Console.WriteLine($"\t{VersionString}", Color.Orange);
+            Console.Write($"{AboutString}", Color.Chocolate);
+            Console.WriteLine($"\t{HomePageUrl}", Color.Orange);
+            
+            System.Console.ResetColor();
+            System.Console.ForegroundColor = ConsoleColor.Red;
+            System.Console.BackgroundColor= ConsoleColor.White;
+            Console.WriteLine($"※ 请用键盘 上↑ 下↓ 键选择，按 回车 确定 ※ ", Color.LightGreen);
+            System.Console.ResetColor();
+            System.Console.ForegroundColor = ConsoleColor.White;
         }
 
         private static void SayGoodbye()
@@ -550,6 +572,8 @@ namespace SmartEduDownloader.Cli
             Console.WriteLine($"下载目录：{_DownloadFolder}", Color.Chocolate);
             // 用 explorer 打开下载目录 _DownloadFolder
             Process.Start("explorer.exe", _DownloadFolder);
+            // 等待用户按任意键
+            System.Console.ReadKey();
 
             Environment.Exit(0);
         }

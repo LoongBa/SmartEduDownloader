@@ -361,3 +361,17 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/SmartEduDownloader.Cli/Data/Books.json
+/SmartEduDownloader.Cli/Data/Catalog.json
+/SmartEduDownloader.Cli/Data/data_version.json
+/SmartEduDownloader.Cli/Data/part_100.json
+/SmartEduDownloader.Cli/Data/part_101.json
+/SmartEduDownloader.Cli/Data/part_102.json
+/SmartEduDownloader.Cli/Data/tch_material_tag.json
+/SmartEduDownloader.Cli/Data/Books.json
+/SmartEduDownloader.Cli/Data/Catalog.json
+/SmartEduDownloader.Cli/Data/data_version.json
+/SmartEduDownloader.Cli/Data/part_100.json
+/SmartEduDownloader.Cli/Data/part_101.json
+/SmartEduDownloader.Cli/Data/part_102.json
+/SmartEduDownloader.Cli/Data/tch_material_tag.json

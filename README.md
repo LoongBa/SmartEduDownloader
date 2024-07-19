@@ -2,13 +2,51 @@
 
 # 智慧教育平台 教材下载器 极简版——命令行版本 V1.00
 
+## 1. 下载说明
+
 **Windows 10 的朋友请下载：**
-SmartEduDownloader.Cli_V1.00_Standalone_forWin10_x64.zip
+**【独立版】** SmartEduDownloader.Cli_V1.00_Standalone_forWin10_x64.zip
 （不依赖 .NET 8 运行环境的版本）
 
 **Windows 11 的朋友可以下载更小的版本：**
-SmartEduDownloader.Cli_V1.00_Runtime_forWin11_x64.zip
+**【最简版】** SmartEduDownloader.Cli_V1.00_Runtime_forWin11_x64.zip
 （Win11 较新版已经内置 .NET 8 运行环境）
+
+### 下载补充说明
+
+**如果你的电脑是 Win10/Win7**  
+——**请在项目网页下载【独立版】**，**SmartEduDownloader.Cli_V1.00_Standalone_forWin10_x64.zip，不需要安装 .NET 8 运行环境，但压缩包略大：9.7M 左右**。 
+**或者用 for Win11 的【最简版】，自行下载安装 .NET 8 运行环境就能运行：**  
+
+- **微软官网** 查看最新版本：[https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0](https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0) **右下角下载【运行时】 x64 版本，安装；**
+- 或者从 **微软官网** 直接下载 .NET 8 runtime 8.07 x64：[https://download.visualstudio.microsoft.com/download/pr/3980ab0a-379f-44a0-9be6-eaf74c07a3b3/bd1cc6107ff3d8fe0104d30f01339b74/dotnet-runtime-8.0.7-win-x64.exe](https://download.visualstudio.microsoft.com/download/pr/3980ab0a-379f-44a0-9be6-eaf74c07a3b3/bd1cc6107ff3d8fe0104d30f01339b74/dotnet-runtime-8.0.7-win-x64.exe)  
+
+**其它系统**，我没测试过，**.NET 跨平台，需要的话，我重新打包一下**应该是可以的，但想必下载教材的需求量不大，将就解决一下吧 &#128514;  
+
+## 2. 已知问题
+
+- CMD 和 Powershell 运行时，**字符颜色不同**；
+- **默认下载**到 “**我的下载**” 目录下的【_国家智慧教育平台_教材电子版_】目录，极简版的用户**自行设置目标目录**的意义不太大，故**简化之**
+- **目录结构**暂时不支持选择，默认为：学段——科目——版本（部编版等）——年级，
+  可**考虑允许选择**另外的目录结构，如：版本——学段——科目——年级
+
+---
+
+去年到今年学习编程过程中，针对**中小学教材电子版的下载**，另外还有两个练手版本：  
+
+- **极简中的极简 JS 版：** Javascript，**只需将一句 js 代码复制到浏览器地址栏**（或者 F12 开发工具的控制台），就能下载当前页面的电子教材  
+  **——添加到收藏夹，非常方便  
+  ——缺点是不支持一次下载多个教材**
+  **Github:** [GitHub - LoongBa/SmartEduDownloaderJS: 极简一键下载【国家智慧教育平台电子教材】，无需注册、登录，无需下载安装软件和环境，粘贴一行 Javascript 即可。](https://github.com/LoongBa/SmartEduDownloaderJS)
+- **加强版：自动打开浏览器，自动添加下载按钮——想下哪个下哪个  
+  ——有了极简版，没必要那么麻烦，考虑加上下载教程全套（视频、教案PPT等）**  
+
+**问题：请问各位，有【下载视频教程】的需求么？**  
+**——有需求，就加上这个功能**
+
+---
+
+## 3. 使用说明
 
 <img src="./images_README/e81fe17b9d9edfb37c369f02403b53771f87b6ea.png" title="" alt="教材下载器_极简版.png" width="1165">
 

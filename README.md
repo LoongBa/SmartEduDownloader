@@ -40,7 +40,7 @@
      
      或者
    
-   + 从 **微软官网** 直接下载 <u>.NET 8 runtime 8.07 x64</u>：[https://download.visualstudio.microsoft.com/download/pr/3980ab0a-379f-44a0-9be6-eaf74c07a3b3/bd1cc6107ff3d8fe0104d30f01339b74/dotnet-runtime-8.0.7-win-x64.exe](https://download.visualstudio.microsoft.com/download/pr/3980ab0a-379f-44a0-9be6-eaf74c07a3b3/bd1cc6107ff3d8fe0104d30f01339b74/dotnet-runtime-8.0.7-win-x64.exe)  
+   + 从 **微软官网** 直接下载 **.NET 8 runtime 8.07 x64**：[https://download.visualstudio.microsoft.com/download/pr/3980ab0a-379f-44a0-9be6-eaf74c07a3b3/bd1cc6107ff3d8fe0104d30f01339b74/dotnet-runtime-8.0.7-win-x64.exe](https://download.visualstudio.microsoft.com/download/pr/3980ab0a-379f-44a0-9be6-eaf74c07a3b3/bd1cc6107ff3d8fe0104d30f01339b74/dotnet-runtime-8.0.7-win-x64.exe)  
 
 **其它系统如 macOS、32位 Windows**，我没测试过，但 **.NET 跨平台，需要的话发布时增加不同版本** 应该是很简单的。
 
@@ -99,15 +99,17 @@
 
 ## 2. 人教社：人民教育出版社 一直免费提供
 
-多年以来，人教社一直提供教材电子版下载。
+多年以来，人教社一直免费提供教材电子版在线阅读和下载。
 
 我一直从[人民教育出版社的官网](http://www.pep.com.cn/)下载小学课本电子版——因为没用到其它教材，就没关心其它版本。
 
 后来大概是在2022年，**数学教材问题**引发重新修改四年级以后的数学教材，人教社官网上暂时不再提供涉及调整的教材。
 
-恢复下载后，下载地址从 [人民教育出版社官方网站－培根铸魂　启智增慧](http://bp.pep.com.cn/jc) 改为了现在可用的 [https://jc.pep.com.cn/](https://jc.pep.com.cn/) ，但仅提供在线阅读，暂时没看到下载链接。
+恢复后，教材地址从 [人民教育出版社官方网站－培根铸魂　启智增慧](http://bp.pep.com.cn/jc) 改为了现在可用的 [https://jc.pep.com.cn/](https://jc.pep.com.cn/) ，
 
-（之前陪孩子学习 Python 时，写了一个脚本可从人教社直接下载）
+——但仅提供在线阅读，暂时没看到下载链接。
+
+（之前陪孩子学习 Python 时，写了一个工具：从人教社直接下载教材的高清图片，然后合成为 PDF）
 
 ## 3. 国家智慧教育平台：国家智慧教育公共服务平台、国家中小学智慧教育平台
 
@@ -123,13 +125,15 @@
 
 ——还有非常多不错的学习资料，是教师备课、家长战友们和孩子们学习的宝藏。
 
-即便**使用本工具不需要注册、登录**，但**推荐各位抽空注册，仔细看看**，有不少优质的教学资源。
+即便**使用本工具不需要注册、登录**，
+
+——毕竟影响了该平台的推广和发展，白白占用了人家的资源，还是尽量支持一下，何况**平台有不少优质的教学资源**。
 
 > 关于【智慧教育】这个话题，以及如何系统地理解和掌握学习的方法论，回头我再细细分享。
 
 ## 4. 推荐：人教社小程序
 
-之所以再次提到人教社，因为从家长和学生角度，**人教社公众号和小程序更好用**——必须帮它们打个广告：
+之所以再次提到人教社，因为从家长和学生角度，**人教社公众号和小程序更好用**——**公益、免费**：
 
 1. **方便手机、平板**等移动设备查看和使用；
 
@@ -137,7 +141,7 @@
 
 作为家长和学生，真心**感谢国家、感谢教育部、感谢相关出版机构**。
 
-# 三、告别不良诱导和低质教材
+## 5. 告别不良诱导和低质教材
 
 每年假期，总有一些战友们（小朋友的父母们）给孩子提前预习下个学期的内容。
 
@@ -158,3 +162,17 @@
 > 2020年2月14日教育部《[关于发布中小学国家课程教材电子版链接的通告](https://www.gov.cn/xinwen/2020-02/14/content_5478551.htm)》
 
 <img title="" src="./images_README/b060a97274d45a344ab679296094edbfd7ef87e1.png" alt="" width="1241">
+
+# 附件和网盘下载
+
+【最简版】<3M，可以直接在 Windows11 中运行，见附件
+
+【独立版】约为9M，从网盘下载：
+
+- 蓝奏云：[中小学教材下载器_极简版](https://wwk.lanzouw.com/b00tarda1c) 密码:hhns
+
+- 123pan: https://www.123pan.com/s/W0s7Vv-JqVjh.html
+
+- 百度盘: [百度网盘 请输入提取码](https://pan.baidu.com/s/1mdF3ql1_lEOexFWSXGyiFw?pwd=qrhh)
+
+——如果不想使用【独立版】，请参考前面的【下载说明】，安装微软的 .NET 8 Rumtime 运行时，27M左右，一劳永逸。

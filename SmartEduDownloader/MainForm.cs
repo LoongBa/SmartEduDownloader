@@ -10,7 +10,7 @@ public partial class MainForm : Form
 {
     private readonly string _DownloadFolder;
     private readonly string _NameString = "国家智慧教育平台 电子教材下载工具";
-    private readonly string _VersionString = "Ver1.01 龙爸 友情提供";
+    private readonly string _VersionString = "Ver1.2 龙爸 友情提供";
 
     private const string MyAvatarImageUrl = "https://pica.zhimg.com/3e1fa87c8ba8023679384796d1226a36_l.jpg";
     private const string HomePageUrl = "https://basic.smartedu.cn/tchMaterial/";

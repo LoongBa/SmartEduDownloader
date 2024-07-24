@@ -3,16 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartEduDownloader", "SmartEduDownloader\SmartEduDownloader.csproj", "{881CC6D2-4BB6-4CA0-B6C8-75AF4C921E0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartEduDownloader.WinForm", "SmartEduDownloader\SmartEduDownloader.WinForm.csproj", "{881CC6D2-4BB6-4CA0-B6C8-75AF4C921E0C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartEduDownloader.Cli", "SmartEduDownloader.Cli\SmartEduDownloader.Cli.csproj", "{C4EEF722-D04F-45BB-85C4-BD65AA62577D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{6239A91D-33C7-43B5-BA79-11076F8308AA}"
 	ProjectSection(SolutionItems) = preProject
-		images_README\e81fe17b9d9edfb37c369f02403b53771f87b6ea.png = images_README\e81fe17b9d9edfb37c369f02403b53771f87b6ea.png
 		LICENSE.txt = LICENSE.txt
 		README.md = README.md
-		教材下载器_极简版.png = 教材下载器_极简版.png
+		resources\SmartEdu_Basic.ico = resources\SmartEdu_Basic.ico
 	EndProjectSection
 EndProject
 Global

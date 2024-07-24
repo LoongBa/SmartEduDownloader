@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnNavigate = new Button();
+            btnDownloadBooks = new Button();
             txtLog = new TextBox();
+            btnDownloadVideos = new Button();
             SuspendLayout();
             // 
-            // btnNavigate
+            // btnDownloadBooks
             // 
-            btnNavigate.Location = new Point(317, 34);
-            btnNavigate.Name = "btnNavigate";
-            btnNavigate.Size = new Size(510, 63);
-            btnNavigate.TabIndex = 0;
-            btnNavigate.Text = "前往： 国家智慧教育平台";
-            btnNavigate.UseVisualStyleBackColor = true;
-            btnNavigate.Click += btnNavigate_Click;
+            btnDownloadBooks.Location = new Point(250, 72);
+            btnDownloadBooks.Name = "btnDownloadBooks";
+            btnDownloadBooks.Size = new Size(219, 63);
+            btnDownloadBooks.TabIndex = 0;
+            btnDownloadBooks.Text = "下载教材电子版";
+            btnDownloadBooks.UseVisualStyleBackColor = true;
+            btnDownloadBooks.Click += btnNavigate_Click;
             // 
             // txtLog
             // 
@@ -50,13 +51,23 @@
             txtLog.Size = new Size(1192, 185);
             txtLog.TabIndex = 1;
             // 
+            // btnDownloadVideos
+            // 
+            btnDownloadVideos.Location = new Point(651, 72);
+            btnDownloadVideos.Name = "btnDownloadVideos";
+            btnDownloadVideos.Size = new Size(219, 63);
+            btnDownloadVideos.TabIndex = 2;
+            btnDownloadVideos.Text = "下载视频教程 全套";
+            btnDownloadVideos.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1222, 730);
+            Controls.Add(btnDownloadVideos);
             Controls.Add(txtLog);
-            Controls.Add(btnNavigate);
+            Controls.Add(btnDownloadBooks);
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "电子教材下载：国家智慧教育平台";
@@ -68,7 +79,8 @@
 
         #endregion
 
-        private Button btnNavigate;
+        private Button btnDownloadBooks;
         private TextBox txtLog;
+        private Button btnDownloadVideos;
     }
 }

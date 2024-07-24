@@ -1,6 +1,6 @@
-# SmartEdu Downloader Cli v1.00
+# SmartEdu Downloader Cli v1.1
 
-# 一、中小学教材电子版下载器 极简版——命令行版本 V1.00
+# 一、中小学教材电子版下载器 极简版——命令行版本 V1.1
 
 ## 告别诱导关注，远离低质量电子版
 
@@ -14,25 +14,35 @@
 
 + **方便学习**，**代码开源、免费无套路**，原本就是带我家小朋友学习编程的练手项目，**一起学习，共同进步**；
 
-## 0. 项目源代码：
+## 项目源代码：
 
 - Github: [GitHub - LoongBa/SmartEduDownloader: 下载 国家智慧教育平台 电子教材、视频课程的极简工具。这是一个陪孩子学编程的练习项目，将陆续练习 WinForm、WPF、MAUI 等 UI 实现方式。](https://github.com/LoongBa/SmartEduDownloader)
 
 - Gitee：[SmartEduDownloader: 下载 国家智慧教育平台 电子教材、视频课程的极简工具。这是一个陪孩子学编程的练习项目，将陆续练习 WinForm、WPF、MAUI 等 UI 实现方式。](https://gitee.com/LoongBa/SmartEduDownloader)
 
+## 0. 更新说明：
+
+Ver1.1
+
++ 加入了版本检测，为尽量避免阻塞操作，退出时运行并提示（仅提示）；
+
++ 加入了检测 开源免费的下载工具 `Aria2c`，如果已经安装则忽略，否则自动下载最新 1.37 版——有的教材文件略大，批量下载时使用 `Aria2c` 会更高效；
+
++ **关闭了 AOT 编译优化**，发布的 exe 反而小了许多，估计是对 AOT 的理解和设置不对，否则应该相反才对。
+
 ## 1. 下载说明
 
 1. **Windows 10** 的朋友请下载：
-   **【独立版】** SmartEduDownloader.Cli_V1.00_Standalone_forWin10_x64.zip
+   **【独立版】** SmartEduDownloader.Cli_V1.1_Standalone_forWin10_x64.zip
    （不依赖 .NET 8 运行环境的版本，在 Windows 7 下也可以运行——我没测试环境，**欢迎反馈**）
 
-2. **Windows 11** 的朋友可以下载更小的版本： 小于 3M
-   **【最简版】** SmartEduDownloader.Cli_V1.00_Runtime_forWin11_x64.zip
+2. **Windows 11** 的朋友可以下载更小的版本： **小于 400KB**
+   **【最简版】** SmartEduDownloader.Cli_V1.1_Runtime_forWin11_x64.zip
    （Win11 较新版已经内置 .NET 8 运行环境）
 
 ### 1.1 运行环境的依赖情况说明
 
-1. **【独立版】** 不需要安装 .NET 8 运行环境，但压缩包略大：9.7M 左右。 
+1. **【独立版】** 不需要安装 .NET 8 运行环境，但压缩包略大：**7.8MB** 左右。 
 
 2. **【最简版】** 需下载安装 .NET 8 运行环境，就能运行：
    
@@ -42,14 +52,14 @@
    
    + 从 **微软官网** 直接下载 **.NET 8 runtime 8.07 x64**：[https://download.visualstudio.microsoft.com/download/pr/3980ab0a-379f-44a0-9be6-eaf74c07a3b3/bd1cc6107ff3d8fe0104d30f01339b74/dotnet-runtime-8.0.7-win-x64.exe](https://download.visualstudio.microsoft.com/download/pr/3980ab0a-379f-44a0-9be6-eaf74c07a3b3/bd1cc6107ff3d8fe0104d30f01339b74/dotnet-runtime-8.0.7-win-x64.exe)  
 
-**其它系统如 macOS、32位 Windows**，我没测试过，但 **.NET 跨平台，需要的话发布时增加不同版本** 应该是很简单的。
+**其它系统如 macOS、32位 Windows**，我没测试过，但 **.NET 跨平台，需要的话发布时增加不同版本** 是很简单的。
 
 但从下载教材的需求来说，想必不太有需求，将就解决一下吧 &#128514;  
 
 ## 2. 已知问题
 
 1. 分别在 `CMD` 和 `Powershell` 运行时，**字符颜色不同**，影响不大，等有空再仔细检查原因；
-2. **默认下载**到 “**我的下载**” 目录下的【_国家智慧教育平台_教材电子版_】目录（每个人的设置不同，工具退出前会提示并自动打开该目录），
+2. **默认下载**到 “**我的下载**” 目录下的【_国家智慧教育平台_教材电子版_】目录（每个人的设置不同，退出前会显示保存位置，并自动打开该目录），
    ——极简版的用户**自行设置目标目录**的意义不太大，故**简化之**
 3. **目录结构**暂时不支持选择，默认为：学段——科目——版本（部编版等）——年级，
    ——**考虑抽空升级，允许选择不同的目录结构**，如：版本——学段——科目——年级
@@ -68,7 +78,7 @@
    
    **Gitee：** [SmartEduDownloaderJS: 极简一键下载【国家智慧教育平台电子教材】，无需注册、登录，无需下载安装软件和环境，在浏览器粘贴一行 Javascript 即可。](https://gitee.com/LoongBa/SmartEduDownloaderJS)
 
-2. **增强版**：——有极简版，暂时没发布，考虑抽空加入下载视频教程的全套素材再发布（视频、教案PPT等）  
+2. **增强版**：——有极简版，暂时没发布，考虑抽空加入**下载视频教程的全套素材**再发布（视频、教案PPT等）  
 
 **请教各位一个问题：有【下载视频教程】的需求么？**  
 **——如果有需求，抽空加上这个功能**
@@ -85,7 +95,7 @@
 > 
 > 完事。
 
-<img src="./images_README/e81fe17b9d9edfb37c369f02403b53771f87b6ea.png" title="" alt="教材下载器_极简版.png" width="1165">
+<img title="" src="./images_README/6818bdc8dbab3b8f8864623c019f7d1cf9288e53.jpg" alt="教材下载器_极简版.png" width="1165">
 
 # 二、背景信息：免费电子版教材的来源
 

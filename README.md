@@ -44,7 +44,7 @@ Ver1.1
 
 1. **【独立版】** 不需要安装 .NET 8 运行环境，但压缩包略大：**7.8MB** 左右。 
 
-2. **【最简版】** 需下载安装 .NET 8 运行环境，就能运行：
+2. **【最简版】** Windows 11 内置 .NET 8 运行环境，Windows 7/10 可能需要先下载安装 .NET 8 运行环境：
    
    + 访问 **微软官网** 选择下载最新版本：[https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0](https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0) （**右下角下载【运行时】 x64 版本，安装**）
      
